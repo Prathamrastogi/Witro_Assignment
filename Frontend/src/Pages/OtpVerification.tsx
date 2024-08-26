@@ -19,7 +19,7 @@ const OtpVerification: React.FC = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/verify-otp",
+        "https://witro-assignment.onrender.com/api/auth/verify-otp",
         { email, otp }
       );
       localStorage.setItem("token", response.data.token);
