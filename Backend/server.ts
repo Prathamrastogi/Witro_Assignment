@@ -25,9 +25,11 @@ console.log(app._router.stack.filter((r: any) => r.route).map((r: any) => r.rout
 
 const PORT = process.env.PORT || 5000;
 
-app.use(express.static(path.join(__dirname, 'frontend/dist')));
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'));
+const rootPath = path.resolve(__dirname, '../..');
+app.use(express.static(path.join(rootPath, "frontend", "dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(rootPath, "frontend", "dist", "index.html"));
 });
 
 app.listen(PORT, () => {
