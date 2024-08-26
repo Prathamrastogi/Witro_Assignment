@@ -4,14 +4,14 @@
     "private": true,
     "scripts": {
         "start": "concurrently \"npm run server\" \"npm run client\"",
-        "server": "npm --prefix backend start",
-        "client": "npm --prefix frontend start",
-        "build1": "npm --prefix backend build",
-        "build": "npm --prefix backend build && npm --prefix frontend build",
+        "server": "npm --prefix Backend start",
+        "client": "npm --prefix Frontend start",
+        "build1": "npm --prefix Backend build",
+        "build": "npm --prefix Backend build && npm --prefix Frontend build",
         "dev": "concurrently \"npm run server-dev\" \"npm run client-dev\"",
-        "server-dev": "npm --prefix backend run dev",
-        "client-dev": "npm --prefix frontend run dev",
-        "install-all": "npm install && npm --prefix frontend install && npm --prefix backend install"
+        "server-dev": "npm --prefix Backend run dev",
+        "client-dev": "npm --prefix Frontend run dev",
+        "install-all": "npm install && npm --prefix Frontend install && npm --prefix Backend install"
     },
     "devDependencies": {
         "concurrently": "^8.2.2"
