@@ -1,0 +1,19 @@
+{
+    "name": "Full-Stack-App",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "start": "concurrently \"npm run server\" \"npm run client\"",
+        "server": "npm --prefix backend start",
+        "client": "npm --prefix frontend start",
+        "build1": "npm --prefix backend build",
+        "build": "npm --prefix backend build && npm --prefix frontend build",
+        "dev": "concurrently \"npm run server-dev\" \"npm run client-dev\"",
+        "server-dev": "npm --prefix backend run dev",
+        "client-dev": "npm --prefix frontend run dev",
+        "install-all": "npm install && npm --prefix frontend install && npm --prefix backend install"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
