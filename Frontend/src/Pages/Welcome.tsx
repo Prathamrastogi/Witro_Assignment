@@ -25,7 +25,7 @@ const Welcome: React.FC = () => {
 
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/auth/user",
+          "https://witro-assignment.onrender.com/api/auth/user",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
