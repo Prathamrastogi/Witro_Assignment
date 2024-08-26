@@ -19,7 +19,7 @@ const Login: React.FC = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://witro-assignment.onrender.com/api/auth/login",
         { email, password }
       );
       localStorage.setItem("token", response.data.token);
