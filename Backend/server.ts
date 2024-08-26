@@ -25,7 +25,7 @@ console.log(app._router.stack.filter((r: any) => r.route).map((r: any) => r.rout
 
 const PORT = process.env.PORT || 5000;
 
-const rootPath = path.resolve(__dirname, '../../..');
+const rootPath = path.resolve(__dirname, '../../../..');
 app.use(express.static(path.join(rootPath, "frontend", "dist")));
 
 app.get("*", (req, res) => {
